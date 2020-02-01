@@ -5,6 +5,7 @@ d3.csv('../../cars-sample.csv').then(function (data) {
   honda = []
   ford = []
 
+  // read in data by manufacturer
   data.forEach(function (d) {
     weight = parseInt(d['Weight'])
     mpg = parseInt(d['MPG'])
@@ -33,12 +34,6 @@ d3.csv('../../cars-sample.csv').then(function (data) {
   });
 
   var ctx = document.getElementById('chart').getContext('2d');
-
-  // determine the size of each point on the chart
-  function getSizes(dataset) {
-    return dataset.map(f => f.x).map(f => f / 500)
-  }
-
   var scatterChart = new Chart(ctx, {
     type: 'scatter',
     data: {
@@ -96,3 +91,8 @@ d3.csv('../../cars-sample.csv').then(function (data) {
     },
   });
 });
+
+// determine the size of each point on the chart
+function getSizes(dataset) {
+  return dataset.map(f => f.x).map(f => f / 500)
+}

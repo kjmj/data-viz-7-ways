@@ -1,11 +1,4 @@
 d3.csv('../../cars-sample.csv').then(function (data) {
-  // used to sort our data by weight
-  function compare(a, b) {
-    if (a['Weight'] < b['Weight']) return -1;
-    if (a['Weight'] > b['Weight']) return 1;
-    return 0;
-  }
-
   // store our data, group it by manufacturer
   cars = { labels: [], series: [[], [], [], [], []] }
 
@@ -103,21 +96,6 @@ d3.csv('../../cars-sample.csv').then(function (data) {
 
   var chart = new Chartist.Line('.ct-chart', cars, options, null);
 
-  // this function determines the fill of the circle based on the series it is in
-  function determineFill(seriesIndex) {
-    if (seriesIndex == 0) {
-      return "rgba(255, 0, 0, 0.5)"
-    } else if (seriesIndex == 1) {
-      return "rgba(0, 0, 255, 0.5)"
-    } else if (seriesIndex == 2) {
-      return "rgba(255, 192, 203, 0.5)"
-    } else if (seriesIndex == 3) {
-      return "rgba(0, 255, 0, 0.5)"
-    } else {
-      return "rgba(191, 255, 0, 0.5)"
-    }
-  }
-
   // now color the points and adjust their size
   chart.on('draw', function (data) {
     if (data.type === 'point') {
@@ -133,3 +111,24 @@ d3.csv('../../cars-sample.csv').then(function (data) {
   });
 });
 
+// this function determines the fill of the circle based on the series it is in
+function determineFill(seriesIndex) {
+  if (seriesIndex == 0) {
+    return "rgba(255, 0, 0, 0.5)"
+  } else if (seriesIndex == 1) {
+    return "rgba(0, 0, 255, 0.5)"
+  } else if (seriesIndex == 2) {
+    return "rgba(255, 192, 203, 0.5)"
+  } else if (seriesIndex == 3) {
+    return "rgba(0, 255, 0, 0.5)"
+  } else {
+    return "rgba(191, 255, 0, 0.5)"
+  }
+}
+
+// used to sort our data by weight
+function compare(a, b) {
+  if (a['Weight'] < b['Weight']) return -1;
+  if (a['Weight'] > b['Weight']) return 1;
+  return 0;
+}
