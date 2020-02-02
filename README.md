@@ -1,140 +1,47 @@
-# 02-DataVis-7ways
-
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
+# chartist.js
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+Chartist is a JavaScript library that lets you make responsive charts. While they don’t support scatter charts by default, there was a way to hack a line chart into a scatter plot. In order get color by manufacturer, I had to separate data for each manufacturer into its own series. They don’t support things like axis labels by default, but there are plugins that let you customize the charts some more. Overall, chartist was decent, but its documentation wasn’t the greatest.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+![chartist](img/chartist.png)
 
-Your goal is to use 7 different tools to make the following chart:
+# chart.js
 
-![ggplot2](img/ggplot2.png)
+Chartjs is a JavaScript library for charting. It was one of my favorite libraries to use, since it was simple and extensible. Adding axis's and customizing colors and point sizes was pretty simple, and the chart comes default with a cool animation. It also gives a nice key, which lets you toggle different series on and off. Overall a very nice library.
 
-These features should be preserved as much as possible in your replication:
+![chartjs](img/chartjs.png)
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# d3.js
 
-Other features are not required. This includes:
+D3js was a lot simpler than I thought it would be. Having messed with d3 in the past, I was initially a bit intimidated by the library, but I quickly found out that making this simple scatter plot was easy in d3. Documentation took a bit of getting used to, and the library does what you tell it to and no more. Setting axis labels was a big tricky but I managed to figure it out with some googling.
 
-- The background grid.
-- The legends.
+![d3js](img/d3js.png)
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+# matplotlib
 
-Improvements are also welcome as part of Technical and Design achievements.
+Matplotlib is a python package that makes charting super simple. In just a few lines of code, I was able to get a simple scatter chart with colors and point sizes. I did notice that the sizing of points wasn’t as noticeable as I wanted it, and I played with some code to make it better but couldn’t make it exactly how I wanted it. Overall, matplotlib is a nice and simple library that makes charting easy.
 
-Libraries, Tools, Languages
----
+![matplotlib](img/matplotlib.png)
 
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+# nvd3
 
-Otherwise, you should seek tools and libraries to fill out your 7.
+Nvd3 is a JavaScript library built on top of d3, with a focus on reusable charts. I am very conflicted on this library - on one side, it is one of the most customizable libraries that I have used. It makes some very nice charts. However, the library really isn’t updated anymore. The last commit to master was over a year ago. Additionally, I had to use d3 v3 in order to get my chart working - 2 versions of d3 in the past. While I really like this library, I would not recommend it for any production charts since it is not being maintained.
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+![nvd3](img/nvd3.png)
 
-I have marked a few that are strongly suggested.
+# plotly.js
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- SPSS
-- d3 `<- since the rest of the class uses this, it's a good idea to use it`
-- nvd3
-- Matplotlib
-- Pixi.js
-- Processing
-- Processing.js
-- Tableau
-- Java 2d
-- GNUplot
-- Vega/Vega-lite
-- Flourish
-- PowerBI
+Plotly is an awesome JavaScript library that makes creating charts simple. It is built on top of d3 and is very high level in comparison. It has some really good documentation, and some of the best out of the box features on chart customizations. I would definitely use this library for charting in the future.
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+![plotly](img/plotly.png)
 
-Tips
----
+# tableau
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+Tableau is a business intelligence platform that is used by many data analysts. It reminded me of an excel that was dedicated to plotting and analyzing data. I found the documentation was not very good, and oftentimes was out of data or did not work on my mac. However, I did figure out how to create a chart, as well as manipulate the colors and sizes of the points. This software is easy to use, and I would recommend it over excel as a no code charting software.
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+![tableau](img/tableau.png)
 
 ## Technical Achievements
 - **Proved P=NP**: Using a combination of...
