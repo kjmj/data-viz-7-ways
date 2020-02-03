@@ -3,7 +3,7 @@ Assignment 2 - Data Visualization, 7 Ways
 
 # chartist.js
 
-Chartist is a JavaScript library that lets you make responsive charts. While they don’t support scatter charts by default, there was a way to hack a line chart into a scatter plot. In order get color by manufacturer, I had to separate data for each manufacturer into its own series. They don’t support things like axis labels by default, but there are plugins that let you customize the charts some more. Overall, chartist was decent, but its documentation wasn’t the greatest.
+Chartist is a JavaScript library that lets you make responsive charts. While they don’t support scatter charts by default, there was a way to hack a line chart into a scatter plot. In order get color by manufacturer, I had to separate data for each manufacturer into its own series. They don’t support things like axis labels by default, but there are plugins that let you customize the charts some more. Overall, chartist was decent, but its documentation wasn’t the greatest. I could not figure out how to get a legend in chartist.
 
 ![chartist](img/chartist.png)
 
@@ -42,3 +42,9 @@ Plotly is an awesome JavaScript library that makes creating charts simple. It is
 Tableau is a business intelligence platform that is used by many data analysts. It reminded me of an excel that was dedicated to plotting and analyzing data. I found the documentation was not very good, and oftentimes was out of data or did not work on my mac. However, I did figure out how to create a chart, as well as manipulate the colors and sizes of the points. This software is easy to use, and I would recommend it over excel as a no code charting software.
 
 ![tableau](img/tableau.png)
+
+## Technical Achievements
+- **Something**: Text
+
+## Design Achievements
+- **Something**: Text

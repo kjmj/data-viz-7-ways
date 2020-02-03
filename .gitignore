@@ -1,2 +1,4 @@
 .vscode/settings.json
 src/matplotlib/__pycache__/matplotlib.cpython-37.pyc
+.DS_Store
+src/tableau/.~tableau__2859.twbr
