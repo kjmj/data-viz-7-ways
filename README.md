@@ -42,10 +42,3 @@ Plotly is an awesome JavaScript library that makes creating charts simple. It is
 Tableau is a business intelligence platform that is used by many data analysts. It reminded me of an excel that was dedicated to plotting and analyzing data. I found the documentation was not very good, and oftentimes was out of data or did not work on my mac. However, I did figure out how to create a chart, as well as manipulate the colors and sizes of the points. This software is easy to use, and I would recommend it over excel as a no code charting software.
 
 ![tableau](img/tableau.png)
-
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
-
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
