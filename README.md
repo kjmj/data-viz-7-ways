@@ -44,7 +44,8 @@ Tableau is a business intelligence platform that is used by many data analysts. 
 ![tableau](img/tableau.png)
 
 ## Technical Achievements
-- **Something**: Text
+- **pandas**: I used a pandas dataframe to read in and manipulate data for my matplotlib chart
 
 ## Design Achievements
-- **Something**: Text
+- **Gridlines**: I added gridlines for all 7 charts
+- **Legend**: I added a legend for all charts except chartist, d3, and matplotlib. Chartist had a plugin that simply didnt work. I tried using [this](https://github.com/susielu/d3-legend) legend library in d3, but couldn't get it to work. And for matplotlib, the legend I created only grabbed the first series in my dataset.
