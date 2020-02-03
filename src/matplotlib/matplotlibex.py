@@ -3,7 +3,7 @@ import pandas as pd
 
 colors = []
 weights = []
-df  = pd.read_csv("cars-sample.csv")
+df = pd.read_csv("cars-sample.csv")
 
 for index, row in df.iterrows():
   # set colors
@@ -22,5 +22,5 @@ for index, row in df.iterrows():
   # set weights
   weights.append(row['Weight'] / 50.0)
   
-df.plot.scatter(title="matplotlib", x='Weight', y='MPG', s=weights, c=colors)
+df.plot.scatter(title="matplotlib", x='Weight', y='MPG', s=weights, c=colors, grid=True)
 plt.show()
