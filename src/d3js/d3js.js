@@ -58,6 +58,35 @@ d3.csv("../../cars-sample.csv", function (data) {
     .style("text-anchor", "middle")
     .text("MPG");
 
+  // gridlines in x axis function
+  function make_x_gridlines() {
+    return d3.axisBottom(x)
+      .ticks(7)
+  }
+
+  // gridlines in y axis function
+  function make_y_gridlines() {
+    return d3.axisLeft(y)
+      .ticks(7)
+  }
+
+  // add the X gridlines
+  svg.append("g")
+    .attr("class", "grid")
+    .attr("transform", "translate(0," + height + ")")
+    .call(make_x_gridlines()
+      .tickSize(-height)
+      .tickFormat("")
+    )
+
+  // // add the Y gridlines
+  svg.append("g")
+    .attr("class", "grid")
+    .call(make_y_gridlines()
+      .tickSize(-width)
+      .tickFormat("")
+    )
+
   // add the points
   svg.append('g')
     .selectAll("dot")
@@ -84,4 +113,6 @@ function determineFill(manufacturer) {
     case "ford":
       return "rgba(191, 255, 0, 0.5)"
   }
+
+
 }
