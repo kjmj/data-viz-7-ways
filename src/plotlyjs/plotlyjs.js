@@ -91,7 +91,7 @@ d3.csv('../../cars-sample.csv').then(function (data) {
     height: 600,
     xaxis: {
       title: 'Weight',
-      showgrid: false,
+      showgrid: true,
       zeroline: false
     },
     yaxis: {
