@@ -1,5 +1,6 @@
-Assignment 2 - Data Visualization, 7 Ways  
+Data Visualization, 7 Ways  
 ===
+I wanted to explore different charting libraries and tools. Here, I create the same visualization in 7 different ways.
 
 # chartist.js
 
